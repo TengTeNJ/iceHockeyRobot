@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:icehockeyrobot/constants.dart';
+import 'package:vibration/vibration.dart';
 
 class P1modeCountdownView extends StatefulWidget {
   const P1modeCountdownView({super.key});
@@ -18,10 +19,13 @@ class _P1modeCountdownViewState extends State<P1modeCountdownView> {
          SizedBox(height: 8,),
         Constants.mediumWhiteTextWidget("02:40:30", 40, Colors.white),
         SizedBox(height: 16,),
-        Image(image: AssetImage("images/mode/stop_icon.png"),width: 65,height: 65,),
 
-
-
+        GestureDetector(onTap: (){
+          print("暂停or开始");
+          Vibration.vibrate(duration: 500);
+          },
+         child:Image(image: AssetImage("images/mode/stop_icon.png"),width: 65,height: 65,),
+        )
       ],
     );
   }

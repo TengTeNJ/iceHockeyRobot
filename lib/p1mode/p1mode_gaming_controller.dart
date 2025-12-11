@@ -1,11 +1,10 @@
 import 'dart:async';
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:icehockeyrobot/p1mode/action_data_list_view.dart';
 import 'package:icehockeyrobot/p1mode/p1mode_countdown_view.dart';
-
+import 'package:icehockeyrobot/p1mode/stats_line_area_view.dart';
 import '../constants.dart';
+import 'TrainingTImeModel.dart';
 
 class P1modeGamingController extends StatefulWidget {
   const P1modeGamingController({super.key});
@@ -18,8 +17,19 @@ class _P1modeGamingControllerState extends State<P1modeGamingController> {
   int count = 3;
   bool isShowGo = false;
   bool countDownIsEnd = false;
-
   Timer ? countDownTimer;
+
+  List<Trainingtimemodel> datas = [
+    Trainingtimemodel(pickupBallTime: "18", time: "2025-06-23"),
+    Trainingtimemodel(pickupBallTime: "18", time: "2025-07-23"),
+    Trainingtimemodel(pickupBallTime: "6", time: "2025-08-23"),
+    Trainingtimemodel(pickupBallTime: "8", time: "2025-09-17"),
+    Trainingtimemodel(pickupBallTime: "3", time: "2025-09-23"),
+    Trainingtimemodel(pickupBallTime: "8", time: "2025-10-26"),
+    Trainingtimemodel(pickupBallTime: "10", time: "2025-11-28"),
+    Trainingtimemodel(pickupBallTime: "12", time: "2025-12-30"),
+  ]; //
+
   @override
   void initState() {
     // TODO: implement initState
@@ -140,6 +150,19 @@ class _P1modeGamingControllerState extends State<P1modeGamingController> {
 
               ActionDataListView(todayCount: "12", useMinutes: 245, todayCal: 32),
 
+              Container(
+                margin: EdgeInsets.only(left: 16,top: 60,right: 16),
+                width: Constants.screenWidth(context),
+                child: Constants.mediumWhiteTextWidget("Time on Trainings", 16, Colors.white,
+                    textAlign: TextAlign.left),
+              ),
+
+              Container(
+                margin: EdgeInsets.only(top: 8,left: 16,right: 16),
+                height: 240,
+                child: StatsLineAreaView(datas: datas),
+              ),
+              SizedBox(height: 64,)
             ]
           ),
         ),

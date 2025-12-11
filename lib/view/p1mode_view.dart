@@ -13,7 +13,7 @@ class _P1modeViewState extends State<P1modeView> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Constants.actionSwitchBGColor,
+      // color: Constants.actionSwitchBGColor,
       child: Column(
         children: [
            Container(

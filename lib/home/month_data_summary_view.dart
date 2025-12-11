@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 import 'package:intl/intl.dart';
 
-
+/// 月份数据汇总
 class MonthDataSummaryView extends StatefulWidget {
   const MonthDataSummaryView({super.key});
 
@@ -50,8 +50,12 @@ class _MonthDataSummaryViewState extends State<MonthDataSummaryView> {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Constants.boldBaseTextWidget("Days Active", 16),
-        SizedBox(width: 22,),
+        Container(
+          margin: EdgeInsets.only(left: 10),
+          child:Constants.boldBaseTextWidget("Day Streak", 10),
+        ),
+
+        SizedBox(width: 14,),
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment:CrossAxisAlignment.start,
@@ -69,10 +73,10 @@ class _MonthDataSummaryViewState extends State<MonthDataSummaryView> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: List.generate(10, (i) =>   // 10 个圆
                   Padding(
-                    padding: const EdgeInsets.only(right: 10), // 圆间距
+                    padding: const EdgeInsets.only(right: 7), // 圆间距
                     child: Container(
-                      width: 10,
-                      height: 10,
+                      width: 7,
+                      height: 7,
                       decoration:  BoxDecoration(
                         color: getColorByIndex(i,row),
                         shape: BoxShape.circle,
