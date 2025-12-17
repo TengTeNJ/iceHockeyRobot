@@ -13,7 +13,6 @@ class MonthDataSummaryView extends StatefulWidget {
 
 class _MonthDataSummaryViewState extends State<MonthDataSummaryView> {
   String currentMonth = "";
-
   @override
   void initState() {
     // TODO: implement initState

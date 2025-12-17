@@ -44,7 +44,8 @@ class _P1modeViewState extends State<P1modeView> {
           Container(
             child: Image.asset('images/home/custom_icon.png',
                 width: 135, height: 75),
-          )
+          ),
+          SizedBox(height: 20,),
         ],
       ),
     );

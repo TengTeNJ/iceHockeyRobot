@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:icehockeyrobot/constants.dart';
+import 'package:icehockeyrobot/p1mode/p1mode_settlement_controller.dart';
 import 'package:vibration/vibration.dart';
 
 class P1modeCountdownView extends StatefulWidget {
@@ -23,6 +24,11 @@ class _P1modeCountdownViewState extends State<P1modeCountdownView> {
         GestureDetector(onTap: (){
           print("暂停or开始");
           Vibration.vibrate(duration: 500);
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => P1modeSettlementController()), //
+          );
           },
          child:Image(image: AssetImage("images/mode/stop_icon.png"),width: 65,height: 65,),
         )

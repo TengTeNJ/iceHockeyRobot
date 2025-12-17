@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
 import '../constants.dart';
-import 'TrainingTImeModel.dart';
+import '../model/TrainingTImeModel.dart';
 
 class StatsLineAreaView extends StatefulWidget {
   List<Trainingtimemodel> datas = []; // 个人训练的数据

@@ -114,7 +114,6 @@ class _P1modeControllerState extends State<P1modeController> {
                 SizedBox(height: 110,),
 
                 Container(
-                  // color: Colors.red,
                     width: Constants.screenWidth(context),
                     height: 500,
                     child: Stack(

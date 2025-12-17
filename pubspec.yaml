@@ -92,5 +92,18 @@ flutter:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
+  fonts:
+    - family: SanFranciscoDisplay
+      fonts:
+        - asset: fonts/SanFranciscoDisplay-Black.ttf
+        - asset: fonts/SanFranciscoDisplay-Bold.ttf
+        - asset: fonts/SanFranciscoDisplay-Medium.ttf
+        - asset: fonts/SanFranciscoDisplay-Regular.ttf
+    - family: DS-DIGI
+      fonts:
+        - asset: fonts/DS-DIGI.ttf
+    - family: tengxun
+      fonts:
+        - asset: fonts/tengxun.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package

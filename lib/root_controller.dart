@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:icehockeyrobot/training/training_data_controller.dart';
 
 import 'constants.dart';
 import 'home/home_controller.dart';
@@ -16,7 +17,7 @@ class _RootControllerState extends State<RootController> {
 
   final List<StatefulWidget> _pageviews = [
     HomeController(),
-    HomeController(),
+    TrainingDataController(),
     HomeController(),
   ];
 
@@ -32,21 +33,58 @@ class _RootControllerState extends State<RootController> {
         selectedItemColor: Constants.selectedModelBgColor,
         unselectedItemColor: Colors.grey,
         backgroundColor: Constants.darkThemeColor,
-        items: const [
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.explore_outlined),
-            activeIcon: Icon(Icons.explore),
+            icon:  Padding(                       // 让图片居中
+              padding: const EdgeInsets.all(0),
+              child: Image.asset(
+                'images/home/home_icon_active.png',
+                width: 24,
+                height: 24,
+              ),
+            ),
+            activeIcon: Padding(padding: const EdgeInsets.all(0),
+               child: Image.asset(
+                 "images/home/home_icon_active.png",
+                 width: 24,
+                 height: 24,
+               ),
+            ),
             label: 'Home',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_outline),
-            activeIcon: Icon(Icons.favorite),
+           BottomNavigationBarItem(
+            icon:  Padding(padding: const EdgeInsets.all(0),
+              child: Image.asset(
+                "images/home/training_icon.png",
+                width: 24,
+                height: 24,
+              ),
+            ),
+            activeIcon: Padding(padding: const EdgeInsets.all(0),
+              child: Image.asset(
+                "images/home/training_icon_active.png",
+                width: 24,
+                height: 24,
+              ),
+            ),
             label: 'Training',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline),
-            activeIcon: Icon(Icons.person),
-            label: 'SetUp',
+            icon: Padding(padding: const EdgeInsets.all(0),
+                     child: Image.asset(
+                       "images/home/explore.png",
+                       width: 24,
+                       height: 24,
+                      ),
+                   ),
+            activeIcon:  Padding(padding: const EdgeInsets.all(0),
+              child: Image.asset(
+                "images/home/explore_active.png",
+                width: 24,
+                height: 24,
+              ),
+            ),
+            label: 'Explore',
           ),
         ],
       ),

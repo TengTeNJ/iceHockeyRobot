@@ -28,9 +28,9 @@ class Constants {
         TextAlign textAlign = TextAlign.center,
         double height = 1.0}) {
     return Text(
+      text,
       maxLines: maxLines ?? null,
       textAlign: textAlign,
-      text,
       style: TextStyle(
           height: height,
           fontFamily: 'SanFranciscoDisplay',
@@ -45,10 +45,10 @@ class Constants {
         TextAlign textAlign = TextAlign.center,
         double height = 1.0}) {
     return Text(
+      text,
       maxLines: maxLines,
       textAlign: textAlign,
       // overflow: TextOverflow.clip,
-      text,
       style: TextStyle(
           height: height,
           fontFamily: 'SanFranciscoDisplay',
@@ -63,9 +63,9 @@ class Constants {
         TextAlign textAlign = TextAlign.center,
         double height = 1.0}) {
     return Text(
+      text,
       textAlign: textAlign,
       maxLines: maxLines,
-      text,
       style: TextStyle(
         height: height,
         fontFamily: 'SanFranciscoDisplay',
@@ -174,6 +174,14 @@ class Constants {
   static Color circlrGreyColor = Color.fromRGBO(177, 177, 177, 1);
   static Color ciccleYellowColor = Color.fromRGBO(251, 186, 0, 1.0);
   static Color ciccleRedColor = Color.fromRGBO(227, 62, 62, 1.0);
+
+  static Color batteryHighBgColor = Color.fromRGBO(11, 207, 11, 0.4);
+  static Color batteryMediumBgColor = Color.fromRGBO(255, 145, 0, 0.4);
+  static Color batteryLowBgColor = Color.fromRGBO(255, 0, 0, 0.4);
+
+  static Color blueToothBgColor = Color.fromRGBO(54, 186, 255, 0.4);
+
+
 
 
 

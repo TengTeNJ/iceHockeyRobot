@@ -1,10 +1,10 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:icehockeyrobot/p1mode/action_data_list_view.dart';
-import 'package:icehockeyrobot/p1mode/p1mode_countdown_view.dart';
+import 'package:icehockeyrobot/view/p1mode_countdown_view.dart';
 import 'package:icehockeyrobot/p1mode/stats_line_area_view.dart';
 import '../constants.dart';
-import 'TrainingTImeModel.dart';
+import '../model/TrainingTImeModel.dart';
 
 class P1modeGamingController extends StatefulWidget {
   const P1modeGamingController({super.key});
@@ -27,7 +27,7 @@ class _P1modeGamingControllerState extends State<P1modeGamingController> {
     Trainingtimemodel(pickupBallTime: "3", time: "2025-09-23"),
     Trainingtimemodel(pickupBallTime: "8", time: "2025-10-26"),
     Trainingtimemodel(pickupBallTime: "10", time: "2025-11-28"),
-    Trainingtimemodel(pickupBallTime: "12", time: "2025-12-30"),
+    Trainingtimemodel(pickupBallTime: "12", time: "2025-11-29"),
   ]; //
 
   @override
@@ -51,6 +51,18 @@ class _P1modeGamingControllerState extends State<P1modeGamingController> {
         setState(() {});
       }
     });
+
+    Future.delayed(Duration(milliseconds:3000),() {
+       datas.add(Trainingtimemodel(pickupBallTime: "12", time: "2025-12-1"));
+       setState(() {});
+
+       Future.delayed(Duration(milliseconds: 3000),(){
+         datas.add(Trainingtimemodel(pickupBallTime: "18", time: "2025-12-2"));
+         setState(() {});
+       });
+    });
+
+
   }
 
   @override
@@ -142,7 +154,6 @@ class _P1modeGamingControllerState extends State<P1modeGamingController> {
                        )
                      )
                  ),
-               
                 ],
               )),
 
