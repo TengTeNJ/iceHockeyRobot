@@ -32,7 +32,7 @@ class _P1modeControllerState extends State<P1modeController> {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      // 1️⃣ 左侧蓝牙按钮
+                      // 1️⃣ 左侧返回按钮
                       Expanded(
                         child: Container(
                           alignment: Alignment.centerLeft, // 想靠左就 left
@@ -42,15 +42,15 @@ class _P1modeControllerState extends State<P1modeController> {
                               Navigator.pop(context);
                             },
                             child: Container(
-                              width: 28,
-                              height: 28,
+                              width: 56,
+                              height: 56,
                               decoration: BoxDecoration(
                                 color: Colors.transparent,
                                 borderRadius: BorderRadius.circular(14),
                               ),
                               child: Center(
                                 child: Image.asset('images/mode/back_icon.png',
-                                    width: 8, height: 15),
+                                    width: 32, height: 30),
                               ),
                             ),
                           ),

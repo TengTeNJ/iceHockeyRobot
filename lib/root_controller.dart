@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:icehockeyrobot/explore/explore_controller.dart';
 import 'package:icehockeyrobot/training/training_data_controller.dart';
 
 import 'constants.dart';
@@ -18,7 +19,7 @@ class _RootControllerState extends State<RootController> {
   final List<StatefulWidget> _pageviews = [
     HomeController(),
     TrainingDataController(),
-    HomeController(),
+    ExploreController(),
   ];
 
   @override

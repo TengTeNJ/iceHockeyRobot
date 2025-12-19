@@ -17,10 +17,48 @@ class _P1modeSettlementControllerState extends State<P1modeSettlementController>
         backgroundColor: Constants.darkControllerColor,
         body:Column(
           children: [
-            SizedBox(height: 100,),
+            // 1️⃣ 左侧返回按钮
+            Column(
+              children: [
+                SizedBox(          // 或者 ConstrainedBox
+                  height: 100,      // 交叉轴方向钉死
+                  child: Row(
+                    children: [
+                      Expanded(    // 现在它只能高
+                        child: Container(
+                          // color: Colors.red,
+                          alignment: Alignment.bottomLeft,
+                          padding: const EdgeInsets.only(left: 19),
+                          child: GestureDetector(
+                            onTap: () => Navigator.pop(context),
+                            child: Container(
+                              width: 56,
+                              height: 56,
+                              decoration: BoxDecoration(
+                                color: Colors.transparent,
+                                borderRadius: BorderRadius.circular(14),
+                              ),
+                              child: Center(
+                                child: Image.asset('images/mode/back_icon.png',
+                                    width: 32, height: 30),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                // 其它行/列子节点
+              ],
+            ),
+
+
+            // SizedBox(height: 100,),
 
             Container(
               // color: Colors.grey,
+                margin: EdgeInsets.only(top: 0),
                 width:Constants.screenWidth(context) ,
                 height: 200,
                 child:Stack(

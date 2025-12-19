@@ -26,7 +26,6 @@ class _TrainingItemViewState extends State<TrainingItemView> {
         height: 38,
         child: Column(
           children: [
-
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -36,7 +35,7 @@ class _TrainingItemViewState extends State<TrainingItemView> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       SizedBox(width: 16,),
-                      Constants.mediumWhiteTextWidget('1', 16, Constants.circlrGreyColor),
+                      Constants.mediumWhiteTextWidget('${widget.model.index}', 16, Constants.circlrGreyColor),
 
                       SizedBox(width: 33,),
                       Constants.mediumWhiteTextWidget('${widget.model.parks}', 16, Color.fromRGBO(214, 49, 23, 1)),

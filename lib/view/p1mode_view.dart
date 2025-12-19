@@ -26,7 +26,7 @@ class _P1modeViewState extends State<P1modeView> {
                  ),
                  Container(
                    margin: EdgeInsets.only(top: 16,right: 16),
-                   child:Image(image: AssetImage('images/home/right_arrow_icon.png',),width: 8*2,height: 15*2,)
+                   child:Image(image: AssetImage('images/mode/right_arrow_icon.png',),width: 8*2,height: 15*2,)
                  )
                ],
              )

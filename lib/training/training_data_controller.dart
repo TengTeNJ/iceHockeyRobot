@@ -19,11 +19,11 @@ class TrainingDataController extends StatefulWidget {
 
 class _TrainingDataControllerState extends State<TrainingDataController> {
   List<TrainingDataModel> data = [
-    TrainingDataModel("17", "20", "68%"),
-    TrainingDataModel("17", "20", "68%"),
-    TrainingDataModel("17", "20", "68%"),
-    TrainingDataModel("17", "20", "68%"),
-    TrainingDataModel("66", "20", "68%",isShowBottomLine: false),
+    TrainingDataModel("17", "20", "68%",index: 1),
+    TrainingDataModel("17", "20", "68%",index: 2),
+    TrainingDataModel("17", "20", "68%",index: 3),
+    TrainingDataModel("17", "20", "68%",index: 4),
+    TrainingDataModel("66", "20", "68%",index: 5,isShowBottomLine: false),
   ];
 
   List<RankDataModel> rankData = [
