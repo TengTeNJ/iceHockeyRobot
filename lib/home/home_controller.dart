@@ -32,13 +32,13 @@ class _HomeControllerState extends State<HomeController> {
                     children: [
                       Container(
                         padding: EdgeInsets.only(left:26,right: 26 ),
-                        child:Constants.boldBaseTextWidget("ROBOT", 26),
+                        child:Constants.boldBaseTextWidget("TriPasser-Bot", 26),
                       ),
                       Expanded(
                         child: Container(
                           // color: Colors.red,
                           alignment: Alignment.centerRight,
-                          padding: const EdgeInsets.only(left: 140), // 代替原来的 margin
+                          padding: const EdgeInsets.only(left: 70), // 代替原来的 margin
                           child: GestureDetector(
                             onTap: () {
                               print("蓝牙点击");
@@ -46,27 +46,28 @@ class _HomeControllerState extends State<HomeController> {
                             child: Row(
                               children: [
                                 Container(
-                                  width: 64,
-                                  height: 64,
+                                  width: 32,
+                                  height: 32,
                                   decoration: BoxDecoration(
-                                    // color: Constants.bluetoothBGNewColor,
-                                    borderRadius: BorderRadius.circular(14),
+                                    color: Constants.batteryLowBgColor,
+                                    borderRadius: BorderRadius.circular(16),
                                   ),
                                   child: Center(
                                     child: Image.asset('images/home/battery_icon.png',
-                                        width: 32, height: 32),
+                                        width: 10, height: 14),
                                   ),
                                 ),
+                                SizedBox(width: 8,),
                                 Container(
-                                  width: 42,
-                                  height: 42,
+                                  width: 32,
+                                  height: 32,
                                   decoration: BoxDecoration(
-                                    // color: Constants.bluetoothBGNewColor,
-                                    borderRadius: BorderRadius.circular(14),
+                                    color: Constants.blueToothBgColor,
+                                    borderRadius: BorderRadius.circular(16),
                                   ),
                                   child: Center(
                                     child: Image.asset('images/home/bluetooth_icon.png',
-                                        width: 32, height: 32),
+                                        width: 11, height: 14),
                                   ),
                                 ),
                               ],
@@ -81,8 +82,12 @@ class _HomeControllerState extends State<HomeController> {
 
                 // 机器人
                 Container(
-                  padding: EdgeInsets.only(left:80,right: 80 ),
-                  child: Image(image: AssetImage("images/home/home_robot.png"),width: 207,height: 150,),
+                  // color: Colors.red,
+                  padding: EdgeInsets.only(left:16,right: 16 ),
+                  child: Image(image: AssetImage("images/home/home_robot.png"),
+                    fit:BoxFit.fitWidth ,
+                    width: Constants.screenWidth(context) - 32,
+                    height: 188,),
                 ),
                 SizedBox(height: 38,),
 
@@ -146,7 +151,7 @@ class _HomeControllerState extends State<HomeController> {
                             borderRadius: BorderRadius.circular(8),
                           ),
                           width: (Constants.screenWidth(context) - 16 - 16 -9)/2,
-                          height: 176,
+                          height: 200,
                           child: P1modeView(type: "P1 Mode",),
                         ),
                       ),
@@ -157,7 +162,7 @@ class _HomeControllerState extends State<HomeController> {
                           borderRadius: BorderRadius.circular(8),
                         ),
                         width: (Constants.screenWidth(context) - 16 - 16 -9)/2,
-                        height: 176,
+                        height: 200,
                         child: P1modeView(type: "Custom",),
                       )
                     ],
