@@ -4,8 +4,9 @@ import 'package:icehockeyrobot/training/training_item_view.dart';
 
 class TrainingListView extends StatefulWidget {
   List<TrainingDataModel> datas;
+  bool ishomePage = true; // 是否是首页跳转进来的
 
-  TrainingListView({required this.datas});
+  TrainingListView({required this.datas,this.ishomePage = false});
 
   @override
   State<TrainingListView> createState() => _TrainingListViewState();
@@ -16,10 +17,10 @@ class _TrainingListViewState extends State<TrainingListView> {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-        padding: EdgeInsets.only(top: 14),   // 去掉系统默认顶部 padding
+        padding: EdgeInsets.only(top: 14,bottom: 44),   // 去掉系统默认顶部 padding
 
         itemBuilder: (context, index) {
-          return TrainingItemView(model: widget.datas[index]);
+          return TrainingItemView(model: widget.datas[index],isHomePage: widget.ishomePage,);
         }, separatorBuilder: (context, index) =>
         SizedBox(
           height: 10,

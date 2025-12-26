@@ -34,8 +34,6 @@ class _TrainingDataControllerState extends State<TrainingDataController> {
     RankDataModel("Jue", "Australis", "2.9s",index: 5),
   ];
 
-
-
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
@@ -44,7 +42,6 @@ class _TrainingDataControllerState extends State<TrainingDataController> {
           child:Column(
             children: [
               SizedBox(height: 60,),
-
               Center(
                 child: Constants.boldWhiteTextWidget("Training", 22),
               ),
@@ -67,11 +64,7 @@ class _TrainingDataControllerState extends State<TrainingDataController> {
                 child:Constants.mediumWhiteTextWidget("Training History", 18, Colors.white,textAlign: TextAlign.left),
               ),
 
-
-
               SizedBox(height: 15,),
-
-
               Container(
                 decoration: BoxDecoration(
                   color: Constants.darkDialogColor,
@@ -97,14 +90,13 @@ class _TrainingDataControllerState extends State<TrainingDataController> {
                 ),
               ),
 
-
               GestureDetector(onTap: (){
+                print("click whole container");
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) => MyTrainingDataController()), //
-                );
-              },
+                );},
                 child:Container(
                   decoration: BoxDecoration(
                     color: Constants.darkDialogColor,
@@ -115,7 +107,7 @@ class _TrainingDataControllerState extends State<TrainingDataController> {
                   ),
                   width: Constants.screenWidth(context) - 32,
                   height: 250,
-                  child: TrainingListView(datas: data),
+                  child: TrainingListView(datas: data,ishomePage: true,),
                 ),
               ),
 

@@ -34,7 +34,7 @@ class _TrainingDataViewState extends State<TrainingDataView> {
             Constants.mediumWhiteTextWidget("${widget.model.Rate}", 14,
                 widget.model.isRise == true ?
                 Color.fromRGBO(91, 204, 106, 1.0) :
-        Color.fromRGBO(227, 62, 62, 1.0)),
+                Color.fromRGBO(227, 62, 62, 1.0)),
 
 
 
