@@ -170,7 +170,7 @@ class _FullScreenVideoState extends State<FullScreenVideo> {
                             borderRadius:BorderRadius.circular(20),
                             child: VideoProgressIndicator(
                               _controller,
-                              allowScrubbing: true, // 允许拖拽
+                              allowScrubbing: false, // 允许拖拽
                               padding: EdgeInsets.only(left: 24,right: 24,top: 0,bottom: 14),
                               // const EdgeInsets.symmetric(horizontal: 24),
                               colors: VideoProgressColors(
