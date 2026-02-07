@@ -158,7 +158,6 @@ class _P1modeGamingControllerState extends State<P1modeGamingController> {
               )),
 
               SizedBox(height: 44,),
-
               ActionDataListView(todayCount: "12", useMinutes: 245, todayCal: 32),
 
               Container(

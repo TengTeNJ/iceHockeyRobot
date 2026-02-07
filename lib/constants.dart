@@ -61,7 +61,9 @@ class Constants {
   static Text boldWhiteTextWidget(String text, double fontSize,
       {int? maxLines,
         TextAlign textAlign = TextAlign.center,
-        double height = 1.0}) {
+        double height = 1.0,
+        Color textColor = Colors.white
+      }) {
     return Text(
       text,
       textAlign: textAlign,
@@ -70,7 +72,7 @@ class Constants {
         height: height,
         fontFamily: 'SanFranciscoDisplay',
         fontWeight: FontWeight.bold,
-        color: Colors.white,
+        color: textColor,
         fontSize: fontSize,
       ),
     );
@@ -88,6 +90,24 @@ class Constants {
       style: TextStyle(
           height: height,
           fontFamily: 'SanFranciscoDisplay',
+          fontWeight: FontWeight.bold,
+          color: textColor,
+          fontSize: fontSize),
+    );
+  }
+
+  static Text dsdigiTextWidget(String text, double fontSize,
+      {int maxLines = 1,
+        TextAlign textAlign = TextAlign.center,
+        Color textColor = Colors.white,
+        double height = 1.0}) {
+    return Text(
+      textAlign: textAlign,
+      maxLines: maxLines,
+      text,
+      style: TextStyle(
+          height: height,
+          fontFamily: 'DS-DIGI',
           fontWeight: FontWeight.bold,
           color: textColor,
           fontSize: fontSize),
@@ -137,6 +157,7 @@ class Constants {
   static Color baseStyleColor = Color.fromRGBO(248, 133, 11, 1);
   static Color baseGreyStyleColor = Color.fromRGBO(177, 177, 177, 1);
   static Color darkControllerColor = Color.fromRGBO(28, 29, 32, 1);
+  static Color newDarkControllerColor = Color.fromRGBO(22, 22, 22, 1);
 
   static Color darkDialogColor = Color.fromRGBO(45, 45, 57, 1);
 
@@ -181,15 +202,29 @@ class Constants {
 
   static Color blueToothBgColor = Color.fromRGBO(54, 186, 255, 0.4);
 
-
-
-
-
   static String connectRobotText =
       'Connect your phone to the Bots Wi-Fi name will match your Bots serial number.The password is';
 
   static String kTcpIPAdress = '10.10.100.254';
   static int kTcpPort = 12345;
-
-
 }
+
+const kDataBaseTableName = 'solo_data_table'; // 数据库的表名(solo的数据)
+const kDataBaseBattleListTableName = 'battle_data_table'; //数据库的表名(battle的数据)
+
+const kDataFrameHeader = 0xA5; // 数据帧头
+const kDataFrameFoot = 0xAA; // 数据帧尾
+// 全局监听
+const kTCPDataListen = 'tcp_data_listen'; //  TCP数据监听
+
+// 冰球机器人的蓝牙名字
+const kBLEDevice_NewName = 'TriPasserBot';
+
+//  冰球机器人的蓝牙模块
+const kBLE_270_SERVICE_UUID = "FFE0";
+const kBLE_270_CHARACTERISTIC_NOTIFY_UUID = "FFE4";
+
+const kBLE_270_SERVICE_W_UUID = "FFE5";
+const kBLE_270_CHARACTERISTIC_WRITER_UUID = "FFE9";
+
+

@@ -26,7 +26,7 @@ class _ActionListViewState extends State<ActionListView> {
   Widget build(BuildContext context) {
     return Container(
 
-      width: (Constants.screenWidth(context)-20) / 3.0,
+      width: (Constants.screenWidth(context)-54*2) / 3.0,
       child: Column(
         // mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -39,7 +39,7 @@ class _ActionListViewState extends State<ActionListView> {
                 mainAxisAlignment: MainAxisAlignment.center,
 
                 children: [
-                  Constants.boldWhiteTextWidget(widget.desc, 30,
+                  Constants.boldWhiteTextWidget(widget.desc, 24,
                       height: 0.8),
                   widget.unit == null
                       ? Container() : Constants.mediumWhiteTextWidget(
@@ -55,7 +55,7 @@ class _ActionListViewState extends State<ActionListView> {
                 style: TextStyle(
                     fontFamily: 'SanFranciscoDisplay',
                     fontWeight: FontWeight.normal,
-                    fontSize: 16,
+                    fontSize: 12,
                     color: Constants.grayTextColor),
               ),
             ),

@@ -33,12 +33,12 @@ enum RobotMode {
 
 /*机器人游戏模式选择*/
 List<int> changeRobotMode(RobotMode mode) {
-  int start = kDataFrameHeader;
+  int start = 0xA5;
   int length = 6;
   int cmd = 0x11;
   int data = mode.index;
   int cs = start + length + cmd + data;
-  int end = kDataFrameFoot;
+  int end = 0xAA;
   print('切换机器人模式:${[start, length, cmd, data, cs, end]}');
   return [start, length, cmd, data, cs, end];
 }

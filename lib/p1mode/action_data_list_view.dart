@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:icehockeyrobot/constants.dart';
 
 import 'action_list_view.dart';
 
@@ -35,12 +36,25 @@ class _ActionDataListViewState extends State<ActionDataListView> {
             ActionListView(
                 title: 'Parks',
                 desc: "${widget.todayCount}"),
+
+            Container(
+              width: 1,
+              height: 26,
+              color: Color.fromRGBO(112, 112, 112, 1),
+            ),
+
             ActionListView(
               title: 'Reaction',
               desc: '${widget.useMinutes}',
               unit: 's',
             ),
             // SizedBox(width: 20),
+
+            Container(
+              width: 1,
+              height: 26,
+              color: Color.fromRGBO(112, 112, 112, 1),
+            ),
             ActionListView(
                 title: 'Hit Rate',
                 desc: '${widget.todayCal}'),
